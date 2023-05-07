@@ -47,7 +47,7 @@ def votes():
 
 def get_sonetwk(bill_detail, member, member_id):
     # 时间无关
-    sonetwk = np.zeros(len(member_id), len(member_id))
+    sonetwk = np.zeros((len(member_id), len(member_id)))
     member2id   = {}
     for step, id in enumerate(member_id):
         member2id[id]=step
