@@ -101,7 +101,7 @@ def get_relationship(snk1, member):
 def mlpinfeats(sonetwk, bill_detail, member, member2id):# get from each votes
     infeats = []
     labels  = []
-    for bill_name in bill_detail.keys():
+    for bill_name in bill_detail.keys():    #need cacl looong time
         bill    = bill_detail[bill_name]
         billfeat    = []
         billfeat.append(bill_name[-3:])
@@ -129,7 +129,6 @@ def mlpinfeats(sonetwk, bill_detail, member, member2id):# get from each votes
                 labels.append(-1)
             elif memid in bill['NV']:
                 labels.append(0)
-    
     return infeats, labels
 
 def mem_idx():
